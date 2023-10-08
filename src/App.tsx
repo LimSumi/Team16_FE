@@ -1,17 +1,16 @@
 import './App.css';
 import { RecoilRoot } from 'recoil';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import Home from 'pages/home/Home';
+import DetailPetPage from 'pages/DetailPetPage';
+import Home from 'pages/Home';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import DetailPetPage from 'pages/detailPet/DetailPetPage';
-import ProfileListPage from 'pages/profileList/ProfileListPage';
-import LoginPage from 'pages/login/LoginPage';
-import MapPage from 'pages/map/MapPage';
-import NewListPage from 'pages/profileList/newList/NewListPage';
-import RegisterPage from 'pages/register/RegisterPage';
-import ShelterInfoPage from 'pages/shelterInfo/ShelterInfoPage';
-import SignupPage from 'pages/signUp/SignupPage';
-import UrgentListPage from 'pages/profileList/urgentList/UrgentListPage';
+import ProfileListPage from 'pages/ProfileListPage';
+import ShelterInfoPage from 'pages/ShelterInfoPage';
+import UrgentListPage from 'pages/UrgentListPage';
+import NewListPage from 'pages/NewListPage';
+import LoginPage from 'pages/LoginPage';
+import SignupPage from 'pages/SignupPage';
+import RegisterPage from 'pages/RegisterPage';
 
 const queryClient = new QueryClient();
 
@@ -30,7 +29,6 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
-            <Route path="/find-shelter" element={<MapPage />} />
           </Routes>
         </BrowserRouter>
       </RecoilRoot>
